@@ -222,7 +222,8 @@ def EncryptData(keys, vec,  text):
 
 def DecryptData(keys, vec,  text):
     text=base64.b64decode(text)
-    z=chitaem_z(keys, vec)
+    z=[]
+    z=chitaem_z(keys, vec, z)
     z_output=bytearray()
     for i in range(len(z)):
         z_output+=z[i].to_bytes(2, 'big')

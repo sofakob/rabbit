@@ -118,6 +118,8 @@ class Test_Z(unittest.TestCase):
         for i in range(2):
             b, x, c=next(b, x, c)
         test=[x, c]
+        print([hex(p) for p in x])
+        print([hex(p) for p in c])
         test_data=[[0x798C2CEC, 0xCC05FFD4, 0x50D68324, 0x2C306745, 0xAD519559, 0x81595E7A, 0x29A589E2, 0x15212B97], [0xA371B1A4, 0xA99C6EAA, 0x76B2A977, 0xA16FAFA2,  0xA79A6CA8,  0x74B0A775,  0x9F6DADA0, 0xB5A86AA6]]
         self.assertEqual(test, test_data)
 
